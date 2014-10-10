@@ -14,6 +14,7 @@ public class HelloWorldMessageServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/hello.jsp");
         request.setAttribute("message", "Hello World");
-        requestDispatcher.forward(request, response);
+        requestDispatcher.forward(request, response);/**/
+		int i= 5;
     }
 }
