@@ -42,7 +42,7 @@ public class DBautoQuery {
     try {
         Class.forName(dbClass).newInstance();
         System.out.println("driver loaded"); // THIS IS BEING RETURNED
-    } catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
+    } catch (Exception ex) {
         System.err.println(ex);
     }
     // Connection
