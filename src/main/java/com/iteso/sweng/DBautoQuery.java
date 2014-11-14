@@ -55,6 +55,23 @@ public class DBautoQuery {
     }
     return done;
    }
+   
+   public void doOperation(String qry)
+    {
+        try 
+        {
+             Statement st = conn.createStatement();
+             st.execute(qry);
+             return ;
+        } 
+        catch (Exception e) 
+        {
+            System.out.println("SQLException on Query: " + e.getMessage());
+        }
+
+    }
+   
+   
    public ResultSet doQuery(String qry)
     {
         try 
